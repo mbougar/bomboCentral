@@ -1,9 +1,7 @@
-package org.example
-
 interface IGestorConsola {
-    fun mostrarMensaje(mensaje: String)
+    fun mostrar(message: String, saltoLinea: Boolean)
 
-    fun obtenerInt(mensaje: String, min: Int, max: Int): Int
+    fun obtenerInt(message: String): Int
 
-    fun obtenerString(mensaje: String): String
+    fun obtenerString(message: String): String
 }

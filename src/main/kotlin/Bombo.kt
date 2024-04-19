@@ -1,4 +1,6 @@
-package org.example
+import org.example.IBombo
+import org.example.Pila
+
 
 class Bombo: IBombo {
     private val pila: Pila<Int>

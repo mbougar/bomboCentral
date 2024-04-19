@@ -1,8 +1,15 @@
-package org.example
+import java.io.File
 
 interface IGestorFicheros {
-    fun crearCarpeta(ruta: String)
-    fun crearFichero(ruta: String)
-    fun leerFIchero(ruta:String): List<String>
-    fun escribirFichero(ruta:String, mensaje:String)
+    fun comprobarDirectorio(ruta: String):Boolean
+
+    fun comprobarFichero(ruta: String):Boolean
+
+    fun escribirFichero(fichero:File, mensaje:String):Boolean
+
+    fun leerFichero(fichero: File): List<String>?
+
+    fun crearDirectorio(ruta: String):Boolean
+
+    fun crearFichero(ruta: String, mensaje: String, sobreescribir:Boolean = true):File?
 }

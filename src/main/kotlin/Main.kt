@@ -1,5 +1,16 @@
 package org.example
 
+import Bombo
+import GestorConsola
+import GestorFicheros
+
 fun main() {
-    println("Hello World!")
+
+    val gestorConsola = GestorConsola()
+    val gestorFicheros = GestorFicheros(gestorConsola)
+    val bombo = Bombo()
+
+    val gestorBingo = GestorBingoEnRed(bombo, gestorFicheros, gestorConsola)
+
+    gestorBingo.iniciarBingo()
 }
