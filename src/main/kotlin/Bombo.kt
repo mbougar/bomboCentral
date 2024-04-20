@@ -27,7 +27,7 @@ class Bombo: IBombo {
         }
     }
 
-    fun obtenerBolasRestantes(): Int {
+    override fun obtenerBolasRestantes(): Int {
 
         return pila.size()
     }
