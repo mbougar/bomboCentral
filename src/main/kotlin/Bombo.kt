@@ -26,4 +26,9 @@ class Bombo: IBombo {
             }
         }
     }
+
+    fun obtenerBolasRestantes(): Int {
+
+        return pila.size()
+    }
 }

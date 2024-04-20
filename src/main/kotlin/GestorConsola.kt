@@ -28,12 +28,4 @@ class GestorConsola: IGestorConsola {
         mostrar(message, false)
         return readln()
     }
-
-    companion object{
-        fun pausa() {
-            println("\nPulsa enter para continuar...")
-            Scanner(System.`in`).nextLine()
-        }
-    }
-
 }
