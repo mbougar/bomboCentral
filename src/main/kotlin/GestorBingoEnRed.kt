@@ -19,13 +19,13 @@ class GestorBingoEnRed(private val bombo: IBombo, private val gestorFicheros: IG
         var ultimaLinea = 0
         val numJugadores = pedirJugadores()
         val fechaString = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"))
-        val rutaCarpetaBingo = "C:\\Bingo"
-        val rutaFicheroBombo = "$rutaCarpetaBingo\\bomboBingo_$fechaString.txt"
-        val rutaCarpetaJugadores = "$rutaCarpetaBingo\\$fechaString"
-        val rutaFicheroJugadores = "$rutaCarpetaJugadores\\usuarios.txt"
+        val rutaCarpetaBingo = "\\\\PCProfe\\Bingo"
+        val rutaFicheroBombo = "$rutaCarpetaBingo\\logoBingoCentral_$fechaString.txt"
+        val rutaCarpetaJugadores = rutaCarpetaBingo
+        val rutaFicheroJugadores = "$rutaCarpetaJugadores\\logoBingoCentralUsuarios_$fechaString.txt"
 
         val ficheroBingo = gestorFicheros.crearFichero(rutaFicheroBombo, "")
-        val ficheroJugadores = gestorFicheros.crearFichero(rutaFicheroBombo, "")
+        val ficheroJugadores = gestorFicheros.crearFichero(rutaFicheroJugadores, "")
 
         if (ficheroBingo != null && ficheroJugadores != null) {
 
