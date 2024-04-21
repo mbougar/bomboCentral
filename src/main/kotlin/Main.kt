@@ -5,7 +5,9 @@ fun main() {
     val gestorConsola = GestorConsola()
     val gestorFicheros = GestorFicheros(gestorConsola)
     val bombo = Bombo()
-    val rutaCarpetaBingo = "\\\\PCProfe\\Bingo"
+    //val rutaCarpetaBingo = "\\\\PCProfe\\Bingo"
+
+    val rutaCarpetaBingo = "C:\\Bingo"
 
     val gestorBingo = GestorBingoEnRed(bombo, gestorFicheros, gestorConsola, rutaCarpetaBingo)
 
